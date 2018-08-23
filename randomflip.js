@@ -26,13 +26,13 @@ function randomNumber(n) {
   
   // Calculate the minimal length to express as binary
   // the maximum possible value
-  var k = maxValue.toString(2).length;
+  var maxValueLength = maxValue.toString(2).length;
   
-  var r;
+  var randomNumber;
   
   do {
     // Get a random number up to maxValue
-    randomNumber = parseInt(randomBinary(k), 2);
+    randomNumber = parseInt(randomBinary(maxValueLength), 2);
   } while (randomNumber > maxValue);
   
   return randomNumber;
